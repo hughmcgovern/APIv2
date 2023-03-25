@@ -26,6 +26,8 @@
           type="email" 
           placeholder="email@domain.com"
           required="required"
+          [clearInput]="true"
+          name="login_email"
           [ngModel]="login_email">
         </ion-input>
       </ion-item>
@@ -36,6 +38,8 @@
           type="password" 
           placeholder="Enter password"
           required="required"
+          [clearInput]="true"
+          name="login_password"
           [ngModel]="login_password">
         </ion-input>
       </ion-item>  
