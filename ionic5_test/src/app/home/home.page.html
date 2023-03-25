@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Validators
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form #form="ngForm">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>LogIn Window</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-list>
+      <ion-item>
+        <ion-label>Email input</ion-label>
+        <ion-input 
+          type="email" 
+          placeholder="email@domain.com"
+          required="required"
+          [ngModel]="login_email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password input</ion-label>
+        <ion-input 
+          type="password" 
+          placeholder="Enter password"
+          required="required"
+          [ngModel]="login_password">
+        </ion-input>
+      </ion-item>  
+    
+    </ion-list>
+    <ion-button 
+      shape="round"
+      expand="block"
+      type="submit"
+      (click)="loginForm(form)"
+      [disabled]="!form.valid">
+      Submit
+    </ion-button>
+  </ion-card>
+</form>
+
+</ion-content>
