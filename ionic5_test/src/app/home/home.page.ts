@@ -11,6 +11,8 @@ export class HomePage implements OnInit {
   constructor() {}
   loginForm(e:any){
     console.log("clicked",e.value);
+   // if(this.login_email="hugh@gmail.com" && this.login_password==1234)
+    //{routerLink="/test"}
   }
 
   ngOnInit(){}
