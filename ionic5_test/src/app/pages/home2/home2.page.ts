@@ -13,10 +13,11 @@ export class Home2Page  {
   constructor(public router:Router) { 
   
   console.log("this is not a safe way to pass data!!!! Just an example");
+  console.log(this.router.getCurrentNavigation());
   
-  this.req_param = this.router.getCurrentNavigation()?.finalUrl;
-  //this.req_param = this.router.getCurrentNavigation()?.finalUrl?.queryParams;
-  this.req_email = this.req_param.login_email;
+  //this.req_param = this.router.getCurrentNavigation()?.finalUrl;
+  this.req_param = this.router.getCurrentNavigation()?.finalUrl?.queryParams;
+  this.req_email = this.req_param.email;
   }
 }
 
