@@ -11,10 +11,13 @@ export class HomePage implements OnInit {
   login_email:any;
   constructor(public router: Router) {}
   loginForm(e:any){
-    console.log("clicked",e.value);
-    this.router.navigateByUrl("/home2");
-   // if(this.login_email="hugh@gmail.com" && this.login_password==1234)
-    //{routerLink="/test"}
+    console.log("requested data:",e.value);
+    console.log("this is not a safe way to pass data!!!!");
+    let url="/home2";
+    let url_withparameter="/home2?email="
+        +e.value.login_email+"&password="
+        +e.value.login_password;
+    this.router.navigateByUrl(url_withparameter);
   }
 
   ngOnInit(){}
